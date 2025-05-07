@@ -218,3 +218,12 @@ function showScore() {
 	setHighScore()
 	getHighScores()
 }
+
+function handleNextButton() {
+	currentQuestionIndex++
+	if (currentQuestionIndex < questions.length && timeLeft > 0) {
+		showQuestion()
+	} else {
+		showScore()
+	}
+}
