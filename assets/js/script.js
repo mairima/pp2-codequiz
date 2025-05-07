@@ -138,6 +138,7 @@ const answerButtons = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-btn")
 const restartButton = document.getElementById("restart-btn")
 const timeDisplay = document.getElementById("time")
+let highscoreContainer = document.getElementById("highscore") 
 
 function startGame() {
     playerName = document.getElementById("playerName").value || "Player"
