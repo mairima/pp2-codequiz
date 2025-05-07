@@ -186,3 +186,25 @@ function resetState() {
 	nextButton.style.display = "none"
 	answerButtons.innerHTML = ""
 }
+
+function selectAnswer(e) {
+	const selectedBtn = e.target
+	const correct = selectedBtn.dataset.correct === "true"
+	if (correct) {
+		correctCount++
+		selectedBtn.style.backgroundColor = "#28a745"
+	} else {
+		incorrectCount++
+		selectedBtn.style.backgroundColor = "#dc3545"
+	}
+	document.getElementById("correctCount").textContent = correctCount
+	document.getElementById("incorrectCount").textContent = incorrectCount
+	Array.from(answerButtons.children).forEach(li => {
+		const btn = li.firstChild
+		btn.disabled = true
+		if (btn.dataset.correct === "true") {
+			btn.style.backgroundColor = "#28a745"
+		}
+	})
+	nextButton.style.display = "inline-block"
+}
