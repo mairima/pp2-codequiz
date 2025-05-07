@@ -76,6 +76,12 @@ body {
     z-index: 999;
     color: #800080;
   }
+  .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+  }
   
 #progress-container {
 
