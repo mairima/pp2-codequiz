@@ -29,7 +29,13 @@ body {
   .btn-group li {
     margin: 10px 0;
   }
-  
+  button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
   
 #progress-container {
 
