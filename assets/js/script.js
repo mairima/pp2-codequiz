@@ -155,7 +155,7 @@ function startGame() {
     showQuestion()
     updateProgressBar()
   }
-  
+
   function startTimer() {
 	timer = setInterval(() => {
 		timeLeft--
@@ -165,4 +165,19 @@ function startGame() {
 			showScore()
 		}
 	}, 1000)
+}
+function showQuestion() {
+	resetState()
+	const current = questions[currentQuestionIndex]
+	questionEl.innerText = current.question
+	current.answers.forEach(answer => {
+		const btn = document.createElement("button")
+		btn.innerText = answer.text
+		btn.classList.add("answer-btn")
+		if (answer.correct) btn.dataset.correct = answer.correct
+		btn.addEventListener("click", selectAnswer)
+		const li = document.createElement("li")
+		li.appendChild(btn)
+		answerButtons.appendChild(li)
+	})
 }
