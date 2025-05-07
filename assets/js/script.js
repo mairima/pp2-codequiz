@@ -137,3 +137,20 @@ const answerButtons = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-btn")
 const restartButton = document.getElementById("restart-btn")
 const timeDisplay = document.getElementById("time")
+
+function startGame() {
+    playerName = document.getElementById("playerName").value || "Player"
+    document.getElementById("displayName").textContent = playerName
+    document.getElementById("nameModal").style.display = "none"
+    currentQuestionIndex = 0
+    correctCount = 0
+    incorrectCount = 0
+    timeLeft = 150
+    document.getElementById("correctCount").textContent = "0"
+    document.getElementById("incorrectCount").textContent = "0"
+    document.getElementById("score-message").textContent = ""
+    restartButton.style.display = "none"
+    startTimer()
+    showQuestion()
+    updateProgressBar()
+  }
