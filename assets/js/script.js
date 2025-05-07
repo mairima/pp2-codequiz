@@ -239,3 +239,9 @@ nextButton.addEventListener("click", () => {
 })
 
 const totalQuestions = questions.length;
+
+function updateProgressBar() {
+	const progressPercent = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+	document.getElementById("progress-fill").style.width = `${progressPercent}%`;
+	document.getElementById("progress-text").textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+}
