@@ -1,4 +1,5 @@
 const questions = [
+    // HTML questions
     {
         question: "What does HTML stand for?",
         answers: [
@@ -154,3 +155,14 @@ function startGame() {
     showQuestion()
     updateProgressBar()
   }
+  
+  function startTimer() {
+	timer = setInterval(() => {
+		timeLeft--
+		timeDisplay.innerText = timeLeft
+		if (timeLeft <= 0) {
+			clearInterval(timer)
+			showScore()
+		}
+	}, 1000)
+}
