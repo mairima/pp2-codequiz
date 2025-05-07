@@ -9,7 +9,7 @@ const questions = [
             { text: "Home Tool Markup Language", correct: false }
         ]
     },
-
+    
     {
         question: "Who is making the Web standards?",
         answers: [
@@ -136,7 +136,6 @@ let playerName = ""
 const questionEl = document.getElementById("question")
 const answerButtons = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-btn")
-const restartButton = document.getElementById("restart-btn")
 const timeDisplay = document.getElementById("time")
 let highscoreContainer = document.getElementById("highscore") 
 
@@ -151,7 +150,6 @@ function startGame() {
     document.getElementById("correctCount").textContent = "0"
     document.getElementById("incorrectCount").textContent = "0"
     document.getElementById("score-message").textContent = ""
-    restartButton.style.display = "none"
     startTimer()
     showQuestion()
     updateProgressBar()
