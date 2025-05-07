@@ -26,6 +26,10 @@ body {
     list-style: none;
     padding: 0;
   }
+  .btn-group li {
+    margin: 10px 0;
+  }
+  
   
 #progress-container {
 
