@@ -45,7 +45,12 @@ body {
   .answer-btn:hover {
     background-color: #5d7ab6;
   }
-  
+  #next-btn {
+    background-color: #28a745;
+    color: white;
+    margin-top: 20px;
+    display: none;
+  }
 
 #progress-container {
 
