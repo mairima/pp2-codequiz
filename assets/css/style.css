@@ -102,8 +102,6 @@ body {
     border-radius: 8px;
     overflow: hidden;
   }
-  
-  
 
 #progress-fill{
     width: 0;
@@ -113,6 +111,7 @@ body {
 }
 #progress-text{
     text-align: center;
+    font-weight: bold;
 }
 .overlay {
     background-color: rgba(0, 0, 0, 0.6);
@@ -121,3 +120,4 @@ body {
     justify-content: center;
     align-items: center;
   }
+ 
