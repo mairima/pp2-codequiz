@@ -227,3 +227,13 @@ function handleNextButton() {
 		showScore()
 	}
 }
+
+nextButton.addEventListener("click", () => {
+
+	if (nextButton.innerText === "Play Again") {
+		location.reload()
+	} else {
+		updateProgressBar()
+		handleNextButton()
+	}
+})
