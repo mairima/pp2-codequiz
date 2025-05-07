@@ -181,3 +181,8 @@ function showQuestion() {
 		answerButtons.appendChild(li)
 	})
 }
+
+function resetState() {
+	nextButton.style.display = "none"
+	answerButtons.innerHTML = ""
+}
