@@ -42,7 +42,11 @@ body {
     color: #fff;
     transition: 0.3s;
   }
+  .answer-btn:hover {
+    background-color: #5d7ab6;
+  }
   
+
 #progress-container {
 
   width: 100%;
