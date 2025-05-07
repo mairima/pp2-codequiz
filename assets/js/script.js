@@ -124,3 +124,10 @@ const questions = [
           ]
         }
       ];
+
+      let currentQuestionIndex = 0
+      let correctCount = 0
+      let incorrectCount = 0
+      let timeLeft = 150
+      let timer
+      let playerName = ""  
