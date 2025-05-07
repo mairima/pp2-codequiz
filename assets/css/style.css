@@ -6,3 +6,12 @@
   border-radius: 5px;
   margin-bottom: 10px;
 }
+#progress-fill{
+    width: 0;
+    height: 20%;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+#progress-text{
+    text-align: center;
+}
