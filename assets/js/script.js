@@ -245,3 +245,13 @@ function updateProgressBar() {
 	document.getElementById("progress-fill").style.width = `${progressPercent}%`;
 	document.getElementById("progress-text").textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
 }
+
+function setHighScore() {
+	const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+	const newScore = {
+		name: playerName,
+		score: correctCount
+	};
+	highScores.push(newScore);
+	localStorage.setItem("highScores", JSON.stringify(highScores));
+}
