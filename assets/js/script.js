@@ -1,26 +1,6 @@
 const questions = [
-    // HTML questions
-    {
-        question: "What does HTML stand for?",
-        answers: [
-            { text: "Hyper Text Markup Language", correct: true },
-            { text: "High Text Machine Language", correct: false },
-            { text: "Hyperlinks and Text Markup Language", correct: false },
-            { text: "Home Tool Markup Language", correct: false }
-        ]
-    },
-    
-    {
-        question: "Who is making the Web standards?",
-        answers: [
-            { text: "Mozilla", correct: false },
-            { text: "Microsoft", correct: false },
-            { text: "The World Wide Web Consortium", correct: true },
-            { text: "Google", correct: false }
-        ]
-    },
 
-    {
+ {
         question: "Choose the correct HTML element for the largest heading:",
         answers: [
             { text: "<h6>", correct: false },
@@ -30,15 +10,6 @@ const questions = [
         ]
     },
 
-    {
-        question: "What does HTML stand for?",
-        answers: [
-            { text: "Hyper Text Markup Language", correct: true },
-            { text: "Home Tool Markup Language", correct: false },
-            { text: "Hyperlinks and Text Markup Language", correct: false },
-            { text: "High Text Machine Language", correct: false }
-        ]
-    },
     {
         question: "Which HTML tag is used to define an internal style sheet?",
         answers: [
