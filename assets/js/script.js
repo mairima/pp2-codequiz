@@ -237,3 +237,5 @@ nextButton.addEventListener("click", () => {
 		handleNextButton()
 	}
 })
+
+const totalQuestions = questions.length;
