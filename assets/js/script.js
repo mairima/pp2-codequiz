@@ -208,3 +208,13 @@ function selectAnswer(e) {
 	})
 	nextButton.style.display = "inline-block"
 }
+
+function showScore() {
+	clearInterval(timer)
+	resetState()
+	questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!`
+	nextButton.innerText = "Play Again"
+	nextButton.style.display = "inline-block"
+	setHighScore()
+	getHighScores()
+}
