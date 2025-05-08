@@ -198,6 +198,8 @@ function handleNextButton() {
     }
 }
 
+
+
 nextButton.addEventListener("click", () => {
 
     if (nextButton.innerText === "Play Again") {
