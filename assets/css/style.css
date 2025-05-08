@@ -1,128 +1,151 @@
 body {
-    margin: 0;
-    height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    background-image: url('/assets/images/bg-images.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  .quiz-container {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 20px;
-    width: 50%;
-    height: 70%;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(0,0,0,0.);
-    margin: auto;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('/assets/images/bg-images.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: lightskyblue;
 
-    justify-content: center;
-  }
-  h1 {
-    margin-top: 0;
-  }
-  #question {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  .btn-group {
-    list-style: none;
-    padding: 0;
-  }
-  .btn-group li {
-    margin: 10px 0;
-  }
-  button {
-    padding: 10px 25px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  .answer-btn {
-    width: 100%;
-    background-color: #466290;
-    color: #fff;
-    transition: 0.3s;
-  }
-  .answer-btn:hover {
-    background-color: #5d7ab6;
-  }
-  #next-btn {
-    background-color: #28a745;
-    color: white;
-    margin-top: 20px;
-    display: none;
-  }
-  #results {
-    margin-top: 1rem;
-    font-weight: bold;
-  } 
-  #score-message {
-    margin-top: 1rem;
-    font-weight: bold;
-    color: #222;
-  }
-  #timer {
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  /* Modal */
+}
+
+.quiz-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 50%;
+  height: 70%;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.);
+  margin: auto;
+
+  justify-content: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#question {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.btn-group {
+  list-style: none;
+  padding: 0;
+}
+
+.btn-group li {
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.answer-btn {
+  width: 100%;
+  background-color: #466290;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.answer-btn:hover {
+  background-color: #5d7ab6;
+}
+
+#next-btn {
+  background-color: #28a745;
+  color: white;
+  margin-top: 20px;
+  display: none;
+}
+
+#results {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#score-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+#timer {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Modal */
 .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(0,0,0,0.8);
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 999;
-    color: #800080;
-  }
-  .modal-content {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-  }
-  .modal input {
-    padding: 10px;
-    font-size: 1rem;
-    width: 80%;
-    margin-bottom: 1rem;
-  }
-  /* progress bar question */
-#progress-container {
-    width: 100%;
-    background: #eee;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  #progress-bar {
-    width: 80%;
-    height: 15px;
-    background-color: #ddd;
-    margin: auto;
-    border-radius: 8px;
-    overflow: hidden;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  color: #800080;
+}
 
-#progress-fill{
-    width: 0;
-    height: 20%;
-    background-color: #007bff;
-    border-radius: 5px;
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
 }
-#progress-text{
-    text-align: center;
-    font-weight: bold;
+
+.modal input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  margin-bottom: 1rem;
 }
+
+/* progress bar question */
+#progress-container {
+  width: 100%;
+  background: #eee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#progress-bar {
+  width: 80%;
+  height: 15px;
+  background-color: #ddd;
+  margin: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  width: 0;
+  height: 20%;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+#progress-text {
+  text-align: center;
+  font-weight: bold;
+}
+
 .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-top: 5px;
-  }
- 
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 5px;
+}
