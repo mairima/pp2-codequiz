@@ -1,6 +1,6 @@
 const questions = [
 
- {
+    {
         question: "Choose the correct HTML element for the largest heading:",
         answers: [
             { text: "<h6>", correct: false },
@@ -108,7 +108,7 @@ const questionEl = document.getElementById("question")
 const answerButtons = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-btn")
 const timeDisplay = document.getElementById("time")
-let highscoreContainer = document.getElementById("highscore") 
+let highscoreContainer = document.getElementById("highscore")
 
 function startGame() {
     playerName = document.getElementById("playerName").value || "Player"

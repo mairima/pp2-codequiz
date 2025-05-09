@@ -11,11 +11,10 @@ body {
   padding: 2rem;
   border-radius: 20px;
   width: 50%;
-  height: 70%;
   text-align: center;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.);
   margin: auto;
-  justify-content: center;
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -146,6 +145,7 @@ button {
   display: flex;
   margin-top: 5px;
 }
+
 .error-page {
   display: flex;
   background: rgba(255, 255, 255, 0.95);
@@ -158,3 +158,26 @@ button {
   margin: auto;
   justify-content: center;
 }
+
+/* Footer*/
+.social-icons {
+  background-color: white;
+  /* or any contrasting color */
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons a {
+  color: black;
+  /* Makes the icon black */
+  font-size: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #444;
+  /* Optional hover effect */
+}
+
+/* End of footer */
