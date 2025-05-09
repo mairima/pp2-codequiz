@@ -99,11 +99,11 @@ const questions = [
     }
 ];
 // Game variables
-let currentQuestionIndex = 0 // Tracks the current question being displayed
-let correctCount = 0  // Counter for correct answers
-let incorrectCount = 0 // Counter for incorrect answers
-let timeLeft = 150 // Timer starting at 150 seconds
-let timer // To store the timer interval
+let currentQuestionIndex = 0; // Tracks the current question being displayed
+let correctCount = 0;  // Counter for correct answers
+let incorrectCount = 0 ;// Counter for incorrect answers
+let timeLeft = 150; // Timer starting at 150 seconds
+let timer; // To store the timer interval
 let playerName = ""; // To store the player's name
 // DOM elements
 const questionEl = document.getElementById("question"); // Question element
@@ -131,7 +131,7 @@ function startGame() {
 // Starts the timer and updates the time display
 function startTimer() {
     timer = setInterval(() => {
-        timeLeft--  // Decrease time by 1 second
+        timeLeft--; // Decrease time by 1 second
         timeDisplay.innerText = timeLeft; // Update the time display
         if (timeLeft <= 0) {  // If time runs out
             clearInterval(timer); // Stop the timer

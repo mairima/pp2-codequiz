@@ -4,6 +4,8 @@ body {
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
   background-size: cover;
+  align-items: center;
+  justify-content: center;
 
 }
 /* Quiz container styling */
@@ -13,7 +15,7 @@ body {
   border-radius: 20px;
   width: 50%;
   text-align: center;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: auto;
   margin-bottom: 50px;
 }
@@ -167,3 +169,27 @@ button {
   /* Optional hover effect */
 }
 /* End of footer */
+
+/* Large devices (small laptops, 992px and up) */
+@media screen and (min-width: 992px) {
+  /* Make all the same height for consistency */
+  .quiz-container {
+      min-height: auto;
+  }
+}
+
+/* xl devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  /* make all the same height for consistency */
+  .quiz-container {
+      min-height: 220px;
+  }
+}
+
+/* xxl devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {
+  /* make all the same height for consistency */
+  .quiz-container {
+      min-height: 195px;
+  }
+}
