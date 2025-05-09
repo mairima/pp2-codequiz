@@ -77,7 +77,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | Modal Display on Page Load-Description and required User name entry | The modal should appear automatically when the page loads and prevent interaction with the quiz until a name is entered.| Reload the page. | Modal is visible, background is dimmed, and quiz buttons are inaccessible. | ![screenshot](documentation/defensive/modal.png) ![screenshot](./documentation/features/nameprompt.png)|
 |Highscore Tracker and Time used | Feature is expected to track the number of correct and incorrect equations and display at end of the game wit hthe time used. | Performed multiple calculations (correct and incorrect) and checked the score tracker and time used. | Score tracker and time updated correctly for all tested scenarios. | ![screenshot](./documentation/features/scoremessageandtime.png) |
 | 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL to test error handling. | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
-| Footer link | Feature is expected to display a github pages Navigate to Github on a new page | works as expected | ![screenshot](./documentation/defensive/github.png) |
+| Footer link | Feature is expected to naviagte to a github page on a new tab. | works as expected | ![screenshot](./documentation/defensive/github.png) |
 
 ## User Story Testing
 
