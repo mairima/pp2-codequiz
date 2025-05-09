@@ -111,8 +111,12 @@ const answerButtons = document.getElementById("answer-buttons"); // Container fo
 const nextButton = document.getElementById("next-btn"); // "Next" button element
 const timeDisplay = document.getElementById("time"); // Time display element
 let highscoreContainer = document.getElementById("highscore"); // High score container
+const timeUsed = 100 - timeLeft; // Time used for the quiz
+
 // Starts the game by initializing values and displaying the first question
 function startGame() {
+    // Only prompt for name if it's not already set
+    if (!playerName) {
     // Get the input element for the player's name
     const nameInput = document.getElementById("playerName"); 
     // Check if the input is empty or only whitespace
@@ -125,9 +129,11 @@ function startGame() {
         return;
     }
     playerName = nameInput.value.trim(); // Get player's name from input
-    
+}
     document.getElementById("displayName").textContent = playerName; // Display player's name
+
     document.getElementById("nameModal").style.display = "none"; // Hide name entry modal
+     // Initialize game state
     currentQuestionIndex = 0; // Reset question index
     correctCount = 0; // Reset correct count
     incorrectCount = 0; // Reset incorrect count
@@ -135,6 +141,7 @@ function startGame() {
     document.getElementById("correctCount").textContent = "0"; // Update the correct count display
     document.getElementById("incorrectCount").textContent = "0"; // Update the incorrect count display
     document.getElementById("score-message").textContent = ""; // Clear score message
+
     shuffleQuestions(questions); // Shuffle questions for random order
     startTimer(); // Start the timer
     showQuestion();// Display the first question
@@ -230,11 +237,12 @@ function handleNextButton() {
 nextButton.addEventListener("click", () => {
 
     if (nextButton.innerText === "Play Again") {
-        location.reload(); // Reload the page to restart the game
+         // just restart the game without prompting for name again
+        startGame(); 
     } else {
         handleNextButton();
     }
-})
+});
 // Saves the current score to localStorage for high score tracking
 function setHighScore() {
     const highScores = JSON.parse(localStorage.getItem("highScores")) || []; //Get existing high scores from localStorage
