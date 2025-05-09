@@ -110,10 +110,10 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 
 | Page | Desktop |
 | --- | --- |
-| Home-start | ![screenshot](documentation/wireframes/desktop-home.png) |
-| Home-content | ![screenshot](documentation/wireframes/desktop-home.png) |
-| Home-end  | ![screenshot](documentation/wireframes/desktop-404.png) |
-| 404  | ![screenshot](documentation/wireframes/desktop-404.png) |
+| Home-start-modal | ![screenshot](./documentation/wirefarmes/modal-view.jpeg) |
+| Quiz-content | ![screenshot](./documentation/wirefarmes/quiz-view.jpeg) |
+| Score view  | ![screenshot](./documentation/wirefarmes/result-view.jpeg) |
+| 404  | ![screenshot](./documentation/wirefarmes/404page.jpeg) |
 
 ## User Stories
 
@@ -143,8 +143,10 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 |Responsive Design| The entire quiz layout adapts to various screen sizes, ensuring a smooth experience on desktops, tablets, and mobile devices.| ![screenshot](documentation\features\responsive.png) |
 |Score Tracking| The user's score is tracked in real-time based on correct answers and shown at the end of the game in a result summary.|(see photo on  Score tracking) |
 |Local Storage for Score History| After each game, the user's name, score, and time are saved in localStorage, allowing them to view their quiz history even after refreshing the page.| (see photo on  Score tracking)|
-|Replay Functionality| TUsers can restart the quiz anytime using the "Play Again" button, resetting the timer, questions, and score.|(See answer feedback photo) |
+|Replay Functionality| The Users can restart the quiz at the end using the "Play Again" button, resetting the timer, questions, and score.|(See answer feedback photo) |
+|Shuffel Function| The question order changes each time the game is replayed, so that the user can test them selfs in remembering the question rather than the order of the previous results.|![screenshot](./documentation/features/shuffel1.png)  ![screenshot](./documentation/features/shuffel2.png)  |
 | 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Quiz Website*| ![screenshot](documentation/features/404.png) |
+
 
 ### Future Features
 
