@@ -79,7 +79,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL to test error handling. | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
 
 ## User Story Testing
-Also here is the user Story Project board: [User Story](https://github.com/users/mairima/projects/5/views/1) 
+Also here is the user story Project board: [User Story](https://github.com/users/mairima/projects/5/views/1) 
 
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
