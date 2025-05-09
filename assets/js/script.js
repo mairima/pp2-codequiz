@@ -1,4 +1,5 @@
 // Array of question objects, each with a question, multiple answers, and the correct answer
+//HTML Quiz Questions
 const questions = [
 
     {
@@ -122,6 +123,7 @@ function startGame() {
     document.getElementById("correctCount").textContent = "0" // Update the correct count display
     document.getElementById("incorrectCount").textContent = "0" // Update the incorrect count display
     document.getElementById("score-message").textContent = "" // Clear score message
+    shuffleQuestions(questions); // Shuffle questions for random order
     startTimer() // Start the timer
     showQuestion() // Display the first question
     updateProgressBar() // Update the progress bar
@@ -237,4 +239,12 @@ function getHighScores() {
 <ol id="highscore-list">
  ${highScores.map(score => `<li>${score.name}: ${score.score}</li>`).join("")}
 `; // Display the top 5 high scores
+}
+// shuffles the questions array to randomize the order of questions
+function shuffleQuestions(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // Pick a random index from 0 to i
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
 }
