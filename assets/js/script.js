@@ -126,7 +126,7 @@ function startGame() {
     shuffleQuestions(questions); // Shuffle questions for random order
     startTimer(); // Start the timer
     showQuestion();// Display the first question
-    updateProgressBar(); // Update the progress bar
+
 }
 // Starts the timer and updates the time display
 function startTimer() {
@@ -209,18 +209,9 @@ nextButton.addEventListener("click", () => {
     if (nextButton.innerText === "Play Again") {
         location.reload(); // Reload the page to restart the game
     } else {
-        updateProgressBar();
         handleNextButton();
     }
 })
-// Updates the progress bar based on the current question index
-const totalQuestions = questions.length;
-
-function updateProgressBar() {
-    const progressPercent = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-    document.getElementById("progress-fill").style.width = `${progressPercent}%`;
-    document.getElementById("progress-text").textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
-}
 // Saves the current score to localStorage for high score tracking
 function setHighScore() {
     const highScores = JSON.parse(localStorage.getItem("highScores")) || []; //Get existing high scores from localStorage
