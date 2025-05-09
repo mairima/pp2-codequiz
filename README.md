@@ -136,15 +136,17 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Start modal | When the user opens the quiz, a modal appears asking for their name. It also provides a brief game description and a "Start Quiz" button. This personalizes the experience and gives users context. | ![screenshot](documentation/features/modalpage.png) |
+| Start modal | When the user opens the quiz, a modal appears asking for required their name before the game starts. It also provides a brief game description and a "Start Quiz" button. This personalizes the experience and gives users context. | ![screenshot](documentation/features/modalpage.png)   ![screenshot](./documentation/features/nameprompt.png)|
 | Multiple-Choice Questions | The quiz pulls from a question bank (e.g., HTML, CSS, JavaScript topics) | ![screenshot](documentation/features/questions.png) |
 | Answer Feedback| When a user selects an answer, immediate visual feedback (color-coded) indicates whether it was correct or incorrect. The correct answer is also highlighted. | ![screenshot](documentation/features/answerfeedback.png) |
-| Game Timer | A countdown timer starts when the quiz begins. If the time runs out before the user finishes, the game ends automatically.| ![screenshot](documentation/features/timer.png) |
+| Game Timer and Score time storage | A countdown timer starts when the quiz begins. If the time runs out before the user finishes, the game ends automatically. Also the Quiz stores the time the user used to play each time and its vissible| ![screenshot](documentation/features/timer.png) Also see photo on  Score tracking bellow.|
 |Responsive Design| The entire quiz layout adapts to various screen sizes, ensuring a smooth experience on desktops, tablets, and mobile devices.| ![screenshot](documentation/features/responsive.png) |
-|Score Tracking| The user's score is tracked in real-time based on correct answers and shown at the end of the game in a result summary.|(see photo on  Score tracking) |
-|Local Storage for Score History| After each game, the user's name, score, and time are saved in localStorage, allowing them to view their quiz history even after refreshing the page.| (see photo on  Score tracking)|
+|Score Tracking| The user's score is tracked in real-time based on correct answers and shown at the end of the game in a result summary.|![screenshot](./documentation/features/scoremessageandtime.png) |
+|Local Storage for Score History| After each game, the user's name, score, and time used are saved in localStorage, allowing them to view their quiz history even after refreshing the page.| (see photo on  Score tracking)|
 |Replay Functionality| The Users can restart the quiz at the end using the "Play Again" button, resetting the timer, questions, and score.|(See answer feedback photo) |
-|Shuffel Function| The question order changes each time the game is replayed, so that the user can test them selfs in remembering the question rather than the order of the previous results.|![screenshot](./documentation/features/shuffel1.png)  ![screenshot](./documentation/features/shuffel2.png)  |
+|When User click Replay, no modal prompt unless after a page refresh| If the user wants to play and dont refresh the page,the modal wont prompt to ask the name again.|(see photo on  Score tracking) |
+|Shuffel Function| The question and answer order changes each time the game is replayed, so that the user can test them selfs in remembering the question rather than the order of the previous results.|![screenshot](./documentation/features/shuffel1.png)  ![screenshot](./documentation/features/shuffel2.png)  |
+|Footer with contact link like Github| Shows the github icon|(see photo on  Score tracking) |
 | 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Quiz Website*| ![screenshot](documentation/features/404.png) |
 
 
