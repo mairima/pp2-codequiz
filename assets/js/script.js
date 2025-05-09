@@ -102,7 +102,7 @@ const questions = [
 let currentQuestionIndex = 0; // Tracks the current question being displayed
 let correctCount = 0;  // Counter for correct answers
 let incorrectCount = 0 ;// Counter for incorrect answers
-let timeLeft = 150; // Timer starting at 150 seconds
+let timeLeft = 100; // Timer starting at 100 seconds
 let timer; // To store the timer interval
 let playerName = ""; // To store the player's name
 // DOM elements
@@ -119,7 +119,7 @@ function startGame() {
     currentQuestionIndex = 0; // Reset question index
     correctCount = 0; // Reset correct count
     incorrectCount = 0; // Reset incorrect count
-    timeLeft = 150; // Reset timer
+    timeLeft = 100; // Reset timer
     document.getElementById("correctCount").textContent = "0"; // Update the correct count display
     document.getElementById("incorrectCount").textContent = "0"; // Update the incorrect count display
     document.getElementById("score-message").textContent = ""; // Clear score message
