@@ -1,10 +1,10 @@
 # Testing
 
 > [!NOTE]
-> Path in case a return back to the [README.md](README.md) file is reuired.
+> Path in case a return back to the [README.md](README.md) file is required.
 
-This Quiz Website has been manually tested and all intended functionality on the project board works. It also has been tested on the websites like  w3, Jigsaw validator, Jshint and it looks good. 
-Outcome of the test results: The webpage opens, a player name can be entered in the modal, click "Start Quiz" works, answering the 10 shuffled questions works, the correct and incorrect counters updating are observed, and after the final question or when time runs out,the result message and "Play Again" button appears, the score is added to the high scores list (limited to the top 5), and clicking "Play Again" resets the quiz.
+This Quiz Website has been manually tested and all intended functionality on the project board works. It also has been tested on the websites like  W3C, Jigsaw validator, Jshint and it looks good. 
+Outcome of the test results: The webpage opens, a player name can be entered in the modal, click "Start Quiz" works, answering the 10 shuffle questions works, the correct and incorrect counters updating are observed, and after the final question or when time runs out,the result message and "Play Again" button appears, the score is added to the high scores list (limited to the top 5), and clicking "Play Again" resets the quiz.
 
 ## Code Validation
 

@@ -14,7 +14,7 @@ This is an interactive web-based Quiz Game built using HTML, CSS, and JavaScript
 ![screenshot](documentation\features\responsive.png)
 
 > [!IMPORTANT]
-> The examples in these templates are strongly influenced by the Code Institute walkthrough project called "Love Maths", Tutorial from GreatStack: https://www.youtube.com/watch?v=PBcqGxrr9g8 and AI recomendations. 
+> The examples in these templates are strongly influenced by the Code Institute walkthrough project called "Love Maths", Tutorial from *([GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8 ))* and AI recomendations. 
 
 ## UX
 
