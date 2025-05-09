@@ -20,106 +20,39 @@ Use the space below to discuss code validation for all of your own code files (*
 
 ### HTML
 
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site URLs, validate using this link: https://validator.w3.org/#validate_by_uri
-2. Otherwise, if you are copying/pasting your HTML code manually, use this link: https://validator.w3.org/#validate_by_input
-
-It's recommended to validate the live pages (all of them) using the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html
-
-⚠️ --- END --- ⚠️
-
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-|  | [404.html](https://github.com/mairima/pp2-codequiz/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/404.html) | ![screenshot](documentation/validation/html--404.png) | Notes (if applicable) |
-|  | [index.html](https://github.com/mairima/pp2-codequiz/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html) | ![screenshot](documentation/validation/html--index.png) | Notes (if applicable) |
+|  | [404.html](https://github.com/mairima/pp2-codequiz/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/404.html) | ![screenshot](documentation/validation/404page.png) |  |
+|  | [index.html](https://github.com/mairima/pp2-codequiz/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html) | ![screenshot](./documentation/validation/html--index.png) | Notes (background image works on github pages if in html, rather than in css in this case.) |
 
 
 ### CSS
-
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-2. If you are copying/pasting your CSS code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-
-It's recommended to validate the live site for your primary CSS file on the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https://mairima.github.io/pp2-codequiz
-
-If you have additional/multiple CSS files, then individual "[validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)" is recommended for the extra CSS files.
-
-**IMPORTANT**: Third-Party tools
-
-If you're using external libraries/frameworks (e.g: Bootstrap, Materialize, Font Awesome, etc.), then sometimes the tool will attempt to also validate these, even though it's not part of your own actual code that you wrote. You are not required to validate the external libraries or frameworks!
-
-⚠️ --- END --- ⚠️
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [style.css](https://github.com/mairima/pp2-codequiz/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://mairima.github.io/pp2-codequiz) | ![screenshot](documentation/validation/css-assets-style.png) | Notes (if applicable) |
+| assets | [style.css](https://github.com/mairima/pp2-codequiz/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://mairima.github.io/pp2-codequiz) | ![screenshot](./documentation/validation/css-assets-style.png) | |
 
 
 ### JavaScript
-
-⚠️ INSTRUCTIONS ⚠️
-
-If using modern JavaScript (ES6) methods, then make sure to include the following line at the very top of every single JavaScript file in your project (this should remain in your files for submission as well):
-
-`/* jshint esversion: 11 */`
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-`/* jshint esversion: 11, jquery: true */`
-
-This allows the JShint validator to recognize modern ES6 methods, such as: `let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as "an array of questions" from `questions.js`, which are used within the main `script.js` file elsewhere. If that's the case, the JShint validation tool doesn't know how to recognize "unused variables" that would normally be imported locally when running your own project. These warnings are acceptable, so showcase on your screenshot(s).
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc. To instantiate these components, we need to use their respective declarator. Again, the JShint validation tool would flag these as "undefined/unused variables". These warnings are acceptable, so showcase on your screenshot(s).
-
-⚠️ --- END --- ⚠️
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [script.js](https://github.com/mairima/pp2-codequiz/blob/main/assets/js/script.js) | N/A | ![screenshot](documentation/validation/js-assets-script.png) | Notes (if applicable) |
+| assets | [script.js](https://github.com/mairima/pp2-codequiz/blob/main/assets/js/script.js) | N/A | ![screenshot](documentation/validation/js-assets-script.png) |  |
 
 
 ## Responsiveness
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is to test the following 3 sizes:
-
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of your results, to "prove" that you've actually tested them.
-
-Using the [amiresponsive](http://ami.responsivedesign.is) mockup images (*or similar*) does not meet the requirements. Consider using some of the built-in device sizes from the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well. It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-⚠️ --- END --- ⚠️
 
 I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Game | ![screenshot](documentation/responsiveness/mobile-game.png) | ![screenshot](documentation/responsiveness/tablet-game.png) | ![screenshot](documentation/responsiveness/desktop-game.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
 
 ## Browser Compatibility
