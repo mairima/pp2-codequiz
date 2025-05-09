@@ -108,10 +108,12 @@ CSS styles used
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 
-| Page | Mobile | Tablet | Desktop |
-| --- | --- | --- | --- |
-| Home | ![screenshot](documentation/wireframes/mobile-home.png) | ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/desktop-home.png) |
-| 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
+| Page | Desktop |
+| --- | --- |
+| Home-start | ![screenshot](documentation/wireframes/desktop-home.png) |
+| Home-content | ![screenshot](documentation/wireframes/desktop-home.png) |
+| Home-end  | ![screenshot](documentation/wireframes/desktop-404.png) |
+| 404  | ![screenshot](documentation/wireframes/desktop-404.png) |
 
 ## User Stories
 
@@ -158,6 +160,8 @@ Leaderboard: how a leaderboard of top players based on scores and time, connecte
 | [![badge](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) | Design and layout. |
 | [![badge](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) | User interaction on the site. |
 | [![badge](https://img.shields.io/badge/GitHub_Pages-grey?logo=githubpages&logoColor=222222)](https://pages.github.com) | Hosting the deployed front-end site. |
+|Visual Studio| Tool for coding |
+|Font awesome| For icons|
 
 ⚠️ NOTE ⚠️
 
