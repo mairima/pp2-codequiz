@@ -172,7 +172,7 @@ Leaderboard: have a leaderboard of top players based on scores and time, connect
 
 [GitHub Projects](https://github.com/users/mairima/projects/5) served as an Agile tool for this project. Through it, EPICs, User Stories, issues, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
-![screenshot](documentation/gh-projects.png)
+![screenshot](./documentation/githubproject.png)
 
 ### MoSCoW Prioritization
 
@@ -214,7 +214,7 @@ You can clone the repository by following these steps:
 3. Select whether you prefer to clone using "HTTPS", "SSH", or "GitHub CLI", and click the "copy" button to copy the URL to your clipboard.
 4. Open "Git Bash" or "Terminal".
 5. Change the current working directory to the location where you want the cloned directory.
-6. In your IDE Terminal, type the following command to clone the repository:
+6. In IDE Terminal, type the following command to clone the repository:
 	- `git clone https://www.github.com/mairima/pp2-codequiz.git`
 7. Press "Enter" to create your local clone.
 
