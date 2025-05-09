@@ -3,20 +3,10 @@
 > [!NOTE]
 > Return back to the [README.md](README.md) file.
 
-This Quiz Website has been manuallt tested and all intended functionality on th eproject board works. It also has been tested on the websites like  w3c, Jigsaw, Jshint and it looks good. 
+This Quiz Website has been manually tested and all intended functionality on the project board works. It also has been tested on the websites like  w3, Jigsaw validator, Jshint and it looks good. 
 Outcome of the test results: The webpage opens, a player name can be entered in the modal, click "Start Quiz" works, answering the 10 shuffled questions works, the correct and incorrect counters updating are observed, and after the final question or when time runs out,the result message and "Play Again" button appears, the score is added to the high scores list (limited to the top 5), and clicking "Play Again" resets the quiz.
 
 ## Code Validation
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use the space below to discuss code validation for all of your own code files (*where applicable*). You are not required to validate external libraries/frameworks.
-
-**MANDATORY**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Where possible, always validate the live URL pages/files, not your local code using copy/paste. There could be subtle/hidden differences.
-
-⚠️ --- END --- ⚠️
 
 ### HTML
 
