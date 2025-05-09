@@ -156,15 +156,26 @@ function showQuestion() {
     resetState(); // Reset the state before showing a new question
     const current = questions[currentQuestionIndex]; // Get the current question
     questionEl.innerText = current.question; // Display the question
-    current.answers.forEach(answer => {
-        const btn = document.createElement("button"); // Create button for each answer
-        btn.innerText = answer.text; // Set button text
-        btn.classList.add("answer-btn"); // Add class for styling
-        if (answer.correct) btn.dataset.correct = answer.correct; // Mark the correct answer
-        btn.addEventListener("click", selectAnswer); // Add event listener to handle answer selection
-        const li = document.createElement("li"); // Create list item for each answer
-        li.appendChild(btn); // Append the button to the list item
-        answerButtons.appendChild(li); // Add the list item to the answer buttons container
+    // Shuffle the current question's answers
+    const shuffledAnswers = [...current.answers].sort(() => Math.random() - 0.5);
+
+// Loop through each shuffled answer option
+    shuffledAnswers.forEach(answer => {
+         // Create a new button element for the answer
+        const btn = document.createElement("button");
+         // Set the button text to the answer text
+        btn.innerText = answer.text;
+        // Add the CSS class for styling
+        btn.classList.add("answer-btn");
+         // If this answer is correct, mark it with a data attribute
+        if (answer.correct) btn.dataset.correct = answer.correct;
+        // Add a click event listener to handle answer selection
+        btn.addEventListener("click", selectAnswer);
+        // Create a list item to wrap the button (for layout)
+        const li = document.createElement("li");
+        li.appendChild(btn);
+         // Append the list item to the answer buttons container
+        answerButtons.appendChild(li);
     });
 }
 // Resets the game state before showing a new question
