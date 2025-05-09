@@ -185,7 +185,7 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 ## Testing
 
 > [!NOTE]
-> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+> For all testing, please refer to the [TESTING.md](https://github.com/mairima/pp2-codequiz/blob/main/Testing.md) file.
 
 ## Deployment
 
