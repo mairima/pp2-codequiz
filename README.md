@@ -11,7 +11,7 @@ This is an interactive web-based Quiz Game built using HTML, CSS, and JavaScript
 **Site Mockups**
 *([techsini](https://techsini.com/multi-mockup))*
 
-![screenshot](documentation\features\responsive.png)
+![screenshot](documentation/features/responsive.png)
 
 > [!IMPORTANT]
 > The examples in these templates are strongly influenced by the Code Institute walkthrough project called "Love Maths", Tutorial from *([GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8 ))* and AI recomendations. 
@@ -136,11 +136,11 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Start modal | When the user opens the quiz, a modal appears asking for their name. It also provides a brief game description and a "Start Quiz" button. This personalizes the experience and gives users context. | ![screenshot](documentation\features\modalpage.png) |
-| Multiple-Choice Questions | The quiz pulls from a question bank (e.g., HTML, CSS, JavaScript topics) | ![screenshot](documentation\features\questions.png) |
-| Answer Feedback| When a user selects an answer, immediate visual feedback (color-coded) indicates whether it was correct or incorrect. The correct answer is also highlighted. | ![screenshot](documentation\features\answerfeedback.png) |
-| Game Timer | A countdown timer starts when the quiz begins. If the time runs out before the user finishes, the game ends automatically.| ![screenshot](documentation\features\timer.png) |
-|Responsive Design| The entire quiz layout adapts to various screen sizes, ensuring a smooth experience on desktops, tablets, and mobile devices.| ![screenshot](documentation\features\responsive.png) |
+| Start modal | When the user opens the quiz, a modal appears asking for their name. It also provides a brief game description and a "Start Quiz" button. This personalizes the experience and gives users context. | ![screenshot](documentation/features/modalpage.png) |
+| Multiple-Choice Questions | The quiz pulls from a question bank (e.g., HTML, CSS, JavaScript topics) | ![screenshot](documentation/features/questions.png) |
+| Answer Feedback| When a user selects an answer, immediate visual feedback (color-coded) indicates whether it was correct or incorrect. The correct answer is also highlighted. | ![screenshot](documentation/features/answerfeedback.png) |
+| Game Timer | A countdown timer starts when the quiz begins. If the time runs out before the user finishes, the game ends automatically.| ![screenshot](documentation/features/timer.png) |
+|Responsive Design| The entire quiz layout adapts to various screen sizes, ensuring a smooth experience on desktops, tablets, and mobile devices.| ![screenshot](documentation/features/responsive.png) |
 |Score Tracking| The user's score is tracked in real-time based on correct answers and shown at the end of the game in a result summary.|(see photo on  Score tracking) |
 |Local Storage for Score History| After each game, the user's name, score, and time are saved in localStorage, allowing them to view their quiz history even after refreshing the page.| (see photo on  Score tracking)|
 |Replay Functionality| The Users can restart the quiz at the end using the "Play Again" button, resetting the timer, questions, and score.|(See answer feedback photo) |
