@@ -4,8 +4,6 @@ body {
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
   background-size: cover;
-  align-items: center;
-  justify-content: center;
 
 }
 /* Quiz container styling */
@@ -16,7 +14,7 @@ body {
   width: 50%;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: auto;
+
   margin-bottom: 50px;
 }
 /* Header styles */
