@@ -1,3 +1,4 @@
+/* General styles for the whole page */
 body {
   margin: 0;
   height: 100vh;
@@ -5,7 +6,7 @@ body {
   background-size: cover;
 
 }
-
+/* Quiz container styling */
 .quiz-container {
   background: rgba(255, 255, 255, 0.95);
   padding: 2rem;
@@ -16,26 +17,26 @@ body {
   margin: auto;
   margin-bottom: 50px;
 }
-
+/* Header styles */
 h1 {
   margin-top: 0;
 }
-
+/* Question text styling */
 #question {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #333;
 }
-
+/* Answer button group list styling */
 .btn-group {
   list-style: none;
   padding: 0;
 }
-
+/* Individual answer button list item */
 .btn-group li {
   margin: 10px 0;
 }
-
+/* General button styling */
 button {
   padding: 10px 25px;
   font-size: 1rem;
@@ -43,36 +44,36 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
-
+/* Style for answer buttons */
 .answer-btn {
   width: 100%;
   background-color: #466290;
   color: #fff;
   transition: 0.3s;
 }
-
+/* Hover effect for answer buttons */
 .answer-btn:hover {
   background-color: #5d7ab6;
 }
-
+/* Next button styling */
 #next-btn {
   background-color: #28a745;
   color: white;
   margin-top: 20px;
   display: none;
 }
-
+/* Result summary styling */
 #results {
   margin-top: 1rem;
   font-weight: bold;
 }
-
+/* Message under score */
 #score-message {
   margin-top: 1rem;
   font-weight: bold;
   color: #222;
 }
-
+/* Timer styling */
 #timer {
   font-weight: bold;
   margin-bottom: 1rem;
@@ -93,14 +94,14 @@ button {
   z-index: 999;
   color: #800080;
 }
-
+/* Modal inner content box */
 .modal-content {
   background-color: #fff;
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
 }
-
+/* Modal input box */
 .modal input {
   padding: 10px;
   font-size: 1rem;
@@ -136,7 +137,7 @@ button {
   text-align: center;
   font-weight: bold;
 }
-
+/* Background overlay behind the quiz */
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100vh;
@@ -145,20 +146,6 @@ button {
   display: flex;
   margin-top: 5px;
 }
-
-.error-page {
-  display: flex;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 20px;
-  width: 50%;
-  height: 70%;
-  text-align: center;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.);
-  margin: auto;
-  justify-content: center;
-}
-
 /* Footer*/
 .social-icons {
   background-color: white;
@@ -179,5 +166,4 @@ button {
   color: #444;
   /* Optional hover effect */
 }
-
 /* End of footer */
