@@ -99,118 +99,118 @@ const questions = [
     }
 ];
 // Game variables
-let currentQuestionIndex = 0
-let correctCount = 0
-let incorrectCount = 0
-let timeLeft = 150
-let timer
-let playerName = ""
+let currentQuestionIndex = 0 // Tracks the current question being displayed
+let correctCount = 0  // Counter for correct answers
+let incorrectCount = 0 // Counter for incorrect answers
+let timeLeft = 150 // Timer starting at 150 seconds
+let timer // To store the timer interval
+let playerName = ""; // To store the player's name
 // DOM elements
-const questionEl = document.getElementById("question")
-const answerButtons = document.getElementById("answer-buttons")
-const nextButton = document.getElementById("next-btn")
-const timeDisplay = document.getElementById("time")
-let highscoreContainer = document.getElementById("highscore")
+const questionEl = document.getElementById("question"); // Question element
+const answerButtons = document.getElementById("answer-buttons"); // Container for answer buttons
+const nextButton = document.getElementById("next-btn"); // "Next" button element
+const timeDisplay = document.getElementById("time"); // Time display element
+let highscoreContainer = document.getElementById("highscore"); // High score container
 // Starts the game by initializing values and displaying the first question
 function startGame() {
-    playerName = document.getElementById("playerName").value || "Player" // Get player's name
-    document.getElementById("displayName").textContent = playerName // Display player's name
-    document.getElementById("nameModal").style.display = "none" // Hide name entry modal
-    currentQuestionIndex = 0 // Reset question index
-    correctCount = 0 // Reset correct count
-    incorrectCount = 0 // Reset incorrect count
-    timeLeft = 150 // Reset timer
-    document.getElementById("correctCount").textContent = "0" // Update the correct count display
-    document.getElementById("incorrectCount").textContent = "0" // Update the incorrect count display
-    document.getElementById("score-message").textContent = "" // Clear score message
+    playerName = document.getElementById("playerName").value || "Player"; // Get player's name
+    document.getElementById("displayName").textContent = playerName; // Display player's name
+    document.getElementById("nameModal").style.display = "none"; // Hide name entry modal
+    currentQuestionIndex = 0; // Reset question index
+    correctCount = 0; // Reset correct count
+    incorrectCount = 0; // Reset incorrect count
+    timeLeft = 150; // Reset timer
+    document.getElementById("correctCount").textContent = "0"; // Update the correct count display
+    document.getElementById("incorrectCount").textContent = "0"; // Update the incorrect count display
+    document.getElementById("score-message").textContent = ""; // Clear score message
     shuffleQuestions(questions); // Shuffle questions for random order
-    startTimer() // Start the timer
-    showQuestion() // Display the first question
-    updateProgressBar() // Update the progress bar
+    startTimer(); // Start the timer
+    showQuestion();// Display the first question
+    updateProgressBar(); // Update the progress bar
 }
 // Starts the timer and updates the time display
 function startTimer() {
     timer = setInterval(() => {
         timeLeft--  // Decrease time by 1 second
-        timeDisplay.innerText = timeLeft // Update the time display
+        timeDisplay.innerText = timeLeft; // Update the time display
         if (timeLeft <= 0) {  // If time runs out
-            clearInterval(timer) // Stop the timer
-            showScore()  // Show the score screen
+            clearInterval(timer); // Stop the timer
+            showScore();  // Show the score screen
         }
-    }, 1000) // Timer interval of 1 second
+    }, 1000); // Timer interval of 1 second
 }
 // Displays the current question and answer options
 function showQuestion() {
-    resetState() // Reset the state before showing a new question
-    const current = questions[currentQuestionIndex] // Get the current question
-    questionEl.innerText = current.question // Display the question
+    resetState(); // Reset the state before showing a new question
+    const current = questions[currentQuestionIndex]; // Get the current question
+    questionEl.innerText = current.question; // Display the question
     current.answers.forEach(answer => {
-        const btn = document.createElement("button") // Create button for each answer
-        btn.innerText = answer.text // Set button text
-        btn.classList.add("answer-btn") // Add class for styling
-        if (answer.correct) btn.dataset.correct = answer.correct // Mark the correct answer
-        btn.addEventListener("click", selectAnswer) // Add event listener to handle answer selection
-        const li = document.createElement("li") // Create list item for each answer
-        li.appendChild(btn) // Append the button to the list item
-        answerButtons.appendChild(li) // Add the list item to the answer buttons container
-    })
+        const btn = document.createElement("button"); // Create button for each answer
+        btn.innerText = answer.text; // Set button text
+        btn.classList.add("answer-btn"); // Add class for styling
+        if (answer.correct) btn.dataset.correct = answer.correct; // Mark the correct answer
+        btn.addEventListener("click", selectAnswer); // Add event listener to handle answer selection
+        const li = document.createElement("li"); // Create list item for each answer
+        li.appendChild(btn); // Append the button to the list item
+        answerButtons.appendChild(li); // Add the list item to the answer buttons container
+    });
 }
 // Resets the game state before showing a new question
 function resetState() {
-    nextButton.style.display = "none" // Hide the "Next" button initially
-    answerButtons.innerHTML = "" // Clear previous answer buttons
+    nextButton.style.display = "none"; // Hide the "Next" button initially
+    answerButtons.innerHTML = ""; // Clear previous answer buttons
 }
 // Handles the selection of an answer
 function selectAnswer(e) {
-    const selectedBtn = e.target // Get the selected button
-    const correct = selectedBtn.dataset.correct === "true" //Check if the selected answer is correct
+    const selectedBtn = e.target; // Get the selected button
+    const correct = selectedBtn.dataset.correct === "true"; //Check if the selected answer is correct
     if (correct) {
-        correctCount++ // Increment correct count
-        selectedBtn.style.backgroundColor = "#28a745" // Green background for correct answer
+        correctCount++; // Increment correct count
+        selectedBtn.style.backgroundColor = "#28a745"; // Green background for correct answer
     } else {
-        incorrectCount++ // Increment incorrect count 
-        selectedBtn.style.backgroundColor = "#dc3545"// Red background for incorrect answer
+        incorrectCount++; // Increment incorrect count 
+        selectedBtn.style.backgroundColor = "#dc3545";// Red background for incorrect answer
     }
     // Update score display
-    document.getElementById("correctCount").textContent = correctCount
-    document.getElementById("incorrectCount").textContent = incorrectCount
+    document.getElementById("correctCount").textContent = correctCount;
+    document.getElementById("incorrectCount").textContent = incorrectCount;
      // Disable all buttons after answering
     Array.from(answerButtons.children).forEach(li => {
-        const btn = li.firstChild
-        btn.disabled = true
+        const btn = li.firstChild;
+        btn.disabled = true;
         if (btn.dataset.correct === "true") {
-            btn.style.backgroundColor = "#28a745"  // Highlight correct answer
+            btn.style.backgroundColor = "#28a745";  // Highlight correct answer
         }
-    })
-    nextButton.style.display = "inline-block" // Show the "Next" button
+    });
+    nextButton.style.display = "inline-block"; // Show the "Next" button
 }
 // Displays the score at the end of the game
 function showScore() {
-    clearInterval(timer) // Stop the timer
-    resetState() // Reset state
-    questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!` // Display score message
-    nextButton.innerText = "Play Again" // Change button text to "Play Again"
-    nextButton.style.display = "inline-block" // Show the "Play Again" button
-    setHighScore() // Save the score to localStorage
-    getHighScores() // Display high scores
+    clearInterval(timer); // Stop the timer
+    resetState(); // Reset state
+    questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!`; // Display score message
+    nextButton.innerText = "Play Again"; // Change button text to "Play Again"
+    nextButton.style.display = "inline-block"; // Show the "Play Again" button
+    setHighScore(); // Save the score to localStorage
+    getHighScores(); // Display high scores
 }
 // Handles the "Next" button functionality
 function handleNextButton() {
-    currentQuestionIndex++ // Move to the next question
+    currentQuestionIndex++; // Move to the next question
     if (currentQuestionIndex < questions.length && timeLeft > 0) {
-        showQuestion() // Display the next question
+        showQuestion(); // Display the next question
     } else {
-        showScore() // If no more questions or time runs out, show the score screen
+        showScore(); // If no more questions or time runs out, show the score screen
     }
 }
 // Event listener for the "Next" button
 nextButton.addEventListener("click", () => {
 
     if (nextButton.innerText === "Play Again") {
-        location.reload() // Reload the page to restart the game
+        location.reload(); // Reload the page to restart the game
     } else {
-        updateProgressBar()
-        handleNextButton()
+        updateProgressBar();
+        handleNextButton();
     }
 })
 // Updates the progress bar based on the current question index
