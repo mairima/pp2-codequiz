@@ -59,7 +59,7 @@ This is an interactive web-based Quiz Game built using HTML, CSS, and JavaScript
 1. User lands on the home page → reads brief instructions.
 2. A modal appears: Brief quiz description, Input for player name, “Start Quiz” button
 3. Start Quiz: Timer begins (e.g., 60 seconds)
-4. User selects an answer:Button color changes to green/red, Answer buttons become disabled, “Next” button becomes visible
+4. User selects an answer: Button color changes to green/red, Answer buttons become disabled, “Next” button becomes visible
 5. End of Quiz; Happens when: All questions are answered OR Time runs out
 Final score shown:
 Correct & incorrect counts
@@ -118,16 +118,17 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 ## User Stories
 
 | Target | Expectation | Outcome |
-| --- | --- | --- |
-| As a user | I would like to input two numbers and select an operator (`+`, `-`, `*`, `/`) | so that I can calculate a result. |
-| As a user | I would like the application to show me an error message if I enter empty input (`NaN`) | so that I understand what went wrong. |
-| As a user | I would like the calculation to happen instantly after I select an operator | so that I get my result quickly without waiting. |
+| --- | --- | --- | 
+| As a user | I would like open the quiz on all browser windows| so that its flexible to participate |
+| As a user| I want to enter my name before starting the quiz| so that my score is visible and personalized.|
+| As a user | I would like to see questions and answer options with buttons| so that I can choose the result. | 
 | As a user | I would like the application to have clear and large buttons for each operator | so that I can easily select the correct one on any device. |
 | As a user | I would like the application to have high-contrast colors and accessible fonts | so that I can easily read and interact with it. |
-| As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. |
-| As a user | I would like the app to show me the correct result if my equation was incorrect | so that I understand how the answer was calculated. |
-| As a user |  I would like to see how many equations I get correct or incorrect | so I can push myself to improve my math skills. |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
+| As a user | I would liketo see a timer | so that I can be aware of the time used|
+| As a user | I would like the app to show me the correct result if my answer was incorrect | so that I can know the correct answer. |
+| As a user | I would like to see the score I get| so I can push myself to improve more | 
+| As a user | I would like to see a 404 error page if I get lost | so that i recognise when on an inexistent page.|
+
 
 ## Features
 
@@ -147,7 +148,7 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 
 ### Future Features
 
-Leaderboard: how a leaderboard of top players based on scores and time, connected to a backend.
+Leaderboard: have a leaderboard of top players based on scores and time, connected to a backend.
 
 ## Tools & Technologies
 
@@ -163,38 +164,13 @@ Leaderboard: how a leaderboard of top players based on scores and time, connecte
 |Visual Studio| Tool for coding |
 |Font awesome| For icons|
 
-⚠️ NOTE ⚠️
-
-Want to add more?
-
-- Tutorial: https://shields.io/badges/static-badge
-- Icons/Logos: https://simpleicons.org
-  - FYI: not all logos are available to use
-
-🛑 --- END --- 🛑
-
 ## Agile Development Process
 
 ### GitHub Projects
 
-⚠️ TIP ⚠️
-
-Consider adding screenshots of your Projects Board(s), Issues (open and closed), and Milestone tasks.
-
-⚠️ --- END ---⚠️
-
-[GitHub Projects](https://www.github.com/mairima/pp2-codequiz/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
+[GitHub Projects](https://github.com/users/mairima/projects/5) served as an Agile tool for this project. Through it, EPICs, User Stories, issues, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
 ![screenshot](documentation/gh-projects.png)
-
-### GitHub Issues
-
-[GitHub Issues](https://www.github.com/mairima/pp2-codequiz/issues) served as an another Agile tool. There, I managed my User Stories and Milestone tasks, and tracked any issues/bugs.
-
-| Link | Screenshot |
-| --- | --- |
-| [![GitHub issues](https://img.shields.io/github/issues/mairima/pp2-codequiz)](https://www.github.com/mairima/pp2-codequiz/issues) | ![screenshot](documentation/gh-issues-open.png) |
-| [![GitHub closed issues](https://img.shields.io/github/issues-closed/mairima/pp2-codequiz)](https://www.github.com/mairima/pp2-codequiz/issues?q=is%3Aissue+is%3Aclosed) | ![screenshot](documentation/gh-issues-closed.png) |
 
 ### MoSCoW Prioritization
 
@@ -203,7 +179,6 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 - **Must Have**: guaranteed to be delivered - required to Pass the project (*max ~60% of stories*)
 - **Should Have**: adds significant value, but not vital (*~20% of stories*)
 - **Could Have**: has small impact if left out (*the rest ~20% of stories*)
-- **Won't Have**: not a priority for this iteration - future features
 
 ## Testing
 
@@ -267,32 +242,22 @@ There are no remaining major differences between the local version when compared
 | Source | Notes |
 | --- | --- |
 | [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
+| [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8) | "How to Write a Git Commit Message" |
 | [Love Maths](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
-| [WebDevSimplified](https://www.youtube.com/watch?v=riDzcEQbX6k) | Inspiration for a quiz app |
-| [WebDevSimplified](https://www.youtube.com/watch?v=1yS-JV4fWqY) | Inspiration for Rock Paper Scissors |
-| [JavaScript30](https://javascript30.com) | Additional JS help |
+| [JavaScript 30](https://javascript30.com) | Additional JS help on day 15 on local storage |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 
 ### Media
 
-- Images: From the website.
-
-- Image Convert
-   
-    - [ConvertPNG](https://www.iloveimg.com/)
+- Images: From the made website.
 
 | Source | Notes |
 | --- | --- |
 | [favicon.io](https://favicon.io) | Generating the favicon |
 
-| [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
-| [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
-
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
+- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team and facilitator for their assistance or with troubleshooting issues.
 
 

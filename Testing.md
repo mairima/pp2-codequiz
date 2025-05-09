@@ -1,7 +1,7 @@
 # Testing
 
 > [!NOTE]
-> Return back to the [README.md](README.md) file.
+> Path in case a return back to the [README.md](README.md) file is reuired.
 
 This Quiz Website has been manually tested and all intended functionality on the project board works. It also has been tested on the websites like  w3, Jigsaw validator, Jshint and it looks good. 
 Outcome of the test results: The webpage opens, a player name can be entered in the modal, click "Start Quiz" works, answering the 10 shuffled questions works, the correct and incorrect counters updating are observed, and after the final question or when time runs out,the result message and "Play Again" button appears, the score is added to the high scores list (limited to the top 5), and clicking "Play Again" resets the quiz.
@@ -15,7 +15,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
 |  | [404.html](https://github.com/mairima/pp2-codequiz/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/404.html) | ![screenshot](documentation/validation/404page.png) |  |
-|  | [index.html](https://github.com/mairima/pp2-codequiz/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html) | ![screenshot](./documentation/validation/html--index.png) | Notes (background image works on github pages if in html, rather than in css in this case, which is only locally.) |
+|  | [index.html](https://github.com/mairima/pp2-codequiz/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html) | ![screenshot](./documentation/validation/html--index.png) | Notes (Adding the background image in the css was only seen locally and not on github pages so far.When added in html page it loads on github pages.) |
 
 
 ### CSS
@@ -79,7 +79,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL to test error handling. | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
 
 ## User Story Testing
-Also here is the user story Project board: [User Story](https://github.com/users/mairima/projects/5/views/1) 
 
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
@@ -90,7 +89,7 @@ Also here is the user story Project board: [User Story](https://github.com/users
 | As a user | I would like the application to have high-contrast colors and accessible fonts | so that I can easily read and interact with it. |See valid answer selection on defensive programming.|
 | As a user | I would liketo see a timer | so that I can be aware of the time used|See Preventing timer from going below zero section on the defensive programming section |
 | As a user | I would like the app to show me the correct result if my answer was incorrect | so that I can know the correct answer. |See valid answer selection on defensive programming.|
-| As a user | I would like to see the score I get| so I can push myself to improve more | Seehigh score tracker on defensive programming section |
+| As a user | I would like to see the score I get| so I can push myself to improve more | See high score tracker on defensive programming section |
 | As a user | I would like to see a 404 error page if I get lost | so that i recognise when on an inexistent page.| See 404 error page on defensive programming section|
 
 
