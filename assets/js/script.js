@@ -101,7 +101,7 @@ const questions = [
 // Game variables
 let currentQuestionIndex = 0; // Tracks the current question being displayed
 let correctCount = 0;  // Counter for correct answers
-let incorrectCount = 0 ;// Counter for incorrect answers
+let incorrectCount = 0;// Counter for incorrect answers
 let timeLeft = 100; // Timer starting at 100 seconds
 let timer; // To store the timer interval
 let playerName = ""; // To store the player's name
@@ -117,23 +117,23 @@ const timeUsed = 100 - timeLeft; // Time used for the quiz
 function startGame() {
     // Only prompt for name if it's not already set
     if (!playerName) {
-    // Get the input element for the player's name
-    const nameInput = document.getElementById("playerName"); 
-    // Check if the input is empty or only whitespace
-    if (!nameInput.value.trim()) {
-        // Show an alert prompting the user to enter their name
-        alert("Please enter your name to start the quiz.");
-         // Set focus back to the input field for convenience
-        nameInput.focus();
-             // Stop the function from continuing
-        return;
+        // Get the input element for the player's name
+        const nameInput = document.getElementById("playerName");
+        // Check if the input is empty or only whitespace
+        if (!nameInput.value.trim()) {
+            // Show an alert prompting the user to enter their name
+            alert("Please enter your name to start the quiz.");
+            // Set focus back to the input field for convenience
+            nameInput.focus();
+            // Stop the function from continuing
+            return;
+        }
+        playerName = nameInput.value.trim(); // Get player's name from input
     }
-    playerName = nameInput.value.trim(); // Get player's name from input
-}
     document.getElementById("displayName").textContent = playerName; // Display player's name
 
     document.getElementById("nameModal").style.display = "none"; // Hide name entry modal
-     // Initialize game state
+    // Initialize game state
     currentQuestionIndex = 0; // Reset question index
     correctCount = 0; // Reset correct count
     incorrectCount = 0; // Reset incorrect count
@@ -163,25 +163,26 @@ function showQuestion() {
     resetState(); // Reset the state before showing a new question
     const current = questions[currentQuestionIndex]; // Get the current question
     questionEl.innerText = current.question; // Display the question
+
     // Shuffle the current question's answers
     const shuffledAnswers = [...current.answers].sort(() => Math.random() - 0.5);
 
-// Loop through each shuffled answer option
+    // Loop through each shuffled answer option
     shuffledAnswers.forEach(answer => {
-         // Create a new button element for the answer
+        // Create a new button element for the answer
         const btn = document.createElement("button");
-         // Set the button text to the answer text
+        // Set the button text to the answer text
         btn.innerText = answer.text;
         // Add the CSS class for styling
         btn.classList.add("answer-btn");
-         // If this answer is correct, mark it with a data attribute
+        // If this answer is correct, mark it with a data attribute
         if (answer.correct) btn.dataset.correct = answer.correct;
         // Add a click event listener to handle answer selection
         btn.addEventListener("click", selectAnswer);
         // Create a list item to wrap the button (for layout)
         const li = document.createElement("li");
         li.appendChild(btn);
-         // Append the list item to the answer buttons container
+        // Append the list item to the answer buttons container
         answerButtons.appendChild(li);
     });
 }
@@ -204,7 +205,7 @@ function selectAnswer(e) {
     // Update score display
     document.getElementById("correctCount").textContent = correctCount;
     document.getElementById("incorrectCount").textContent = incorrectCount;
-     // Disable all buttons after answering
+    // Disable all buttons after answering
     Array.from(answerButtons.children).forEach(li => {
         const btn = li.firstChild;
         btn.disabled = true;
@@ -218,11 +219,18 @@ function selectAnswer(e) {
 function showScore() {
     clearInterval(timer); // Stop the timer
     resetState(); // Reset state
-    questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!`; // Display score message
-    nextButton.innerText = "Play Again"; // Change button text to "Play Again"
-    nextButton.style.display = "inline-block"; // Show the "Play Again" button
-    setHighScore(); // Save the score to localStorage
-    getHighScores(); // Display high scores
+    //Add Time used and Final Score to the score message
+    const timeUsed = 100 - timeLeft;
+    const finalScore = correctCount * 10 + timeLeft;
+    // Display score message
+    questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!
+    Time used: ${timeUsed} seconds.
+    Your final score is ${finalScore}.`;
+
+    nextButton.innerText = "Play Again";
+    nextButton.style.display = "inline-block";
+    setHighScore(finalScore, timeUsed); // Pass new values
+    getHighScores();
 }
 // Handles the "Next" button functionality
 function handleNextButton() {
@@ -237,18 +245,19 @@ function handleNextButton() {
 nextButton.addEventListener("click", () => {
 
     if (nextButton.innerText === "Play Again") {
-         // just restart the game without prompting for name again
-        startGame(); 
+        // just restart the game without prompting for name again
+        startGame();
     } else {
         handleNextButton();
     }
 });
 // Saves the current score to localStorage for high score tracking
-function setHighScore() {
+function setHighScore(finalScore, timeUsed) {
     const highScores = JSON.parse(localStorage.getItem("highScores")) || []; //Get existing high scores from localStorage
     const newScore = {
         name: playerName, // Store player name
-        score: correctCount // Store player score
+        score: finalScore, // Store player score
+        timeUsed: timeUsed // Store time used
     };
     highScores.push(newScore); // Add new score to the list
     localStorage.setItem("highScores", JSON.stringify(highScores)); // Save updated high scores to localStorage
@@ -259,8 +268,8 @@ function getHighScores() {
     highScores = highScores.sort((a, b) => b.score - a.score).slice(0, 5); // Sort and get top 5 high scores
     highscoreContainer.innerHTML = ` <h2>High Scores</h2>
 <ol id="highscore-list">
- ${highScores.map(score => `<li>${score.name}: ${score.score}</li>`).join("")}
-`; // Display the top 5 high scores
+  ${highScores.map(score => `<li>${score.name}: ${score.score} points (Time used: ${score.timeUsed}s)</li>`).join("")}
+</ol>`; // Display high scores and time in the container
 }
 // shuffles the questions array to randomize the order of questions
 function shuffleQuestions(array) {
