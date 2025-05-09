@@ -9,7 +9,7 @@ Developer: Mairi Aissatou ([mairima](https://www.github.com/mairima))
 This is an interactive web-based Quiz Game built using HTML, CSS, and JavaScript. The game challenges players with multiple-choice questions presented one at a time. Users enter their name before starting via a modal pop-up. A countdown timer adds urgency. The game includes localStorage integration to save score history for replay value and performance tracking.
 
 **Site Mockups**
-*([techsini](https://techsini.com/multi-mockup))*
+*([amiresponsive](https://ui.dev/amiresponsive?url=https://mairima.github.io/pp2-codequiz))*
 
 ![screenshot](documentation/features/responsive.png)
 
