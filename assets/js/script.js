@@ -113,7 +113,19 @@ const timeDisplay = document.getElementById("time"); // Time display element
 let highscoreContainer = document.getElementById("highscore"); // High score container
 // Starts the game by initializing values and displaying the first question
 function startGame() {
-    playerName = document.getElementById("playerName").value || "Player"; // Get player's name
+    // Get the input element for the player's name
+    const nameInput = document.getElementById("playerName"); 
+    // Check if the input is empty or only whitespace
+    if (!nameInput.value.trim()) {
+        // Show an alert prompting the user to enter their name
+        alert("Please enter your name to start the quiz.");
+         // Set focus back to the input field for convenience
+        nameInput.focus();
+             // Stop the function from continuing
+        return;
+    }
+    playerName = nameInput.value.trim(); // Get player's name from input
+    
     document.getElementById("displayName").textContent = playerName; // Display player's name
     document.getElementById("nameModal").style.display = "none"; // Hide name entry modal
     currentQuestionIndex = 0; // Reset question index
