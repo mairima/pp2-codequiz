@@ -14,7 +14,7 @@ This is an interactive web-based Quiz Game built using HTML, CSS, and JavaScript
 ![screenshot](documentation/features/responsive.png)
 
 > [!IMPORTANT]
-> The examples in these templates are strongly influenced by the Code Institute walkthrough project called "Love Maths", Tutorial from *([GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8 ))* and AI recomendations. 
+> The examples in the quiz are strongly influenced by the Code Institute walkthrough project called "Love Maths", Tutorial from *([GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8 ))* and AI recomendations. 
 
 ## UX
 
@@ -102,7 +102,8 @@ I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to ge
 
 ### Typography
 
-CSS styles used
+- CSS styles used.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
 ## Wireframes
 
@@ -147,7 +148,7 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 |When User click Replay, no modal prompt unless after a page refresh| If the user wants to play and dont refresh the page,the modal wont prompt to ask the name again.|(see photo on  Score tracking) |
 |Shuffel Function| The question and answer order changes each time the game is replayed, so that the user can test them selfs in remembering the question rather than the order of the previous results.|![screenshot](./documentation/features/shuffel1.png)  ![screenshot](./documentation/features/shuffel2.png)  |
 |Footer with contact link like Github| Shows the github icon|(see photo on  Score tracking) |
-| 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Quiz Website*| ![screenshot](documentation/features/404.png) |
+| 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Quiz Website*| ![screenshot](./documentation/defensive/404.png) |
 
 
 ### Future Features
