@@ -6,6 +6,7 @@ body {
   background-size: cover;
 
 }
+
 /* Quiz container styling */
 .quiz-container {
   background: rgba(255, 255, 255, 0.95);
@@ -17,25 +18,30 @@ body {
 
   margin-bottom: 50px;
 }
+
 /* Header styles */
 h1 {
   margin-top: 0;
 }
+
 /* Question text styling */
 #question {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #333;
 }
+
 /* Answer button group list styling */
 .btn-group {
   list-style: none;
   padding: 0;
 }
+
 /* Individual answer button list item */
 .btn-group li {
   margin: 10px 0;
 }
+
 /* General button styling */
 button {
   padding: 10px 25px;
@@ -44,6 +50,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
+
 /* Style for answer buttons */
 .answer-btn {
   width: 100%;
@@ -51,10 +58,12 @@ button {
   color: #fff;
   transition: 0.3s;
 }
+
 /* Hover effect for answer buttons */
 .answer-btn:hover {
   background-color: #5d7ab6;
 }
+
 /* Next button styling */
 #next-btn {
   background-color: #28a745;
@@ -62,17 +71,20 @@ button {
   margin-top: 20px;
   display: none;
 }
+
 /* Result summary styling */
 #results {
   margin-top: 1rem;
   font-weight: bold;
 }
+
 /* Message under score */
 #score-message {
   margin-top: 1rem;
   font-weight: bold;
   color: #222;
 }
+
 /* Timer styling */
 #timer {
   font-weight: bold;
@@ -94,6 +106,7 @@ button {
   z-index: 999;
   color: #800080;
 }
+
 /* Modal inner content box */
 .modal-content {
   background-color: #fff;
@@ -101,6 +114,7 @@ button {
   border-radius: 15px;
   text-align: center;
 }
+
 /* Modal input box */
 .modal input {
   padding: 10px;
@@ -118,6 +132,7 @@ button {
   display: flex;
   margin-top: 5px;
 }
+
 /* Footer*/
 .social-icons {
   background-color: white;
@@ -138,28 +153,32 @@ button {
   color: #444;
   /* Optional hover effect */
 }
+
 /* End of footer */
 
 /* Large devices (small laptops, 992px and up) */
 @media screen and (min-width: 992px) {
+
   /* Make all the same height for consistency */
   .quiz-container {
-      min-height: auto;
+    min-height: auto;
   }
 }
 
 /* xl devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
+
   /* make all the same height for consistency */
   .quiz-container {
-      min-height: 220px;
+    min-height: 220px;
   }
 }
 
 /* xxl devices (larger desktops, 1400px and up) */
 @media screen and (min-width: 1400px) {
+
   /* make all the same height for consistency */
   .quiz-container {
-      min-height: 195px;
+    min-height: 195px;
   }
 }
