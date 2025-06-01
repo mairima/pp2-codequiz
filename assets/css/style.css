@@ -8,6 +8,14 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+/* Full-page */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* disables scrolling */
+  height: 100vh;
+}
+
 /* Quiz container styling */
 .quiz-container {
   background: rgba(255, 255, 255, 0.95);
@@ -16,8 +24,8 @@ body {
   width: 70%;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
   margin-bottom: 50px;
+
 }
 
 /* Header styles */
