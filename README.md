@@ -145,7 +145,7 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 |Score Tracking| The user's score is tracked in real-time based on correct answers and shown at the end of the game in a result summary.|![screenshot](./documentation/features/scoremessageandtime.png) |
 |Local Storage for Score History| After each game, the user's name, score, and time used are saved in localStorage, allowing them to view their quiz history even after refreshing the page.| (see photo on  Score tracking)|
 |Replay Functionality| The Users can restart the quiz at the end using the "Play Again" button, resetting the timer, questions, and score.|(See answer feedback photo) |
-|When User click Replay, no modal prompt unless after a page refresh| If the user wants to play and dont refresh the page,the modal wont prompt to ask the name again.|(see photo on  Score tracking) |
+|Playagain| Skips modal entry. Last top score player is refilled, unless manually changed|(see photo on  Score tracking) |
 |Shuffel Function| The question and answer order changes each time the game is replayed, so that the user can test them selfs in remembering the question rather than the order of the previous results.|![screenshot](./documentation/features/shuffel1.png)  ![screenshot](./documentation/features/shuffel2.png)  |
 |Footer with contact link like Github| Shows the github icon|(see photo on  Score tracking) |
 | 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Quiz Website*| ![screenshot](./documentation/defensive/404.png) |
