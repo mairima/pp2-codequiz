@@ -15,7 +15,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
 |  | [404.html](https://github.com/mairima/pp2-codequiz/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/404.html) | ![screenshot](documentation/validation/404page.png) |  |
-|  | [index.html](https://github.com/mairima/pp2-codequiz/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html) | ![screenshot](./documentation/validation/html--index.png) | Notes (Adding the background image in the css was only seen locally and not on github pages so far.When added in html page it loads on github pages.) |
+|  | [index.html](https://github.com/mairima/pp2-codequiz/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html) | ![screenshot](./documentation/validation/passhtmlvalidator.png) | pass |
 
 
 ### CSS
@@ -33,7 +33,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [script.js](https://github.com/mairima/pp2-codequiz/blob/main/assets/js/script.js) | N/A | ![screenshot](documentation/validation/js-assets-script.png) |  |
+| assets | [script.js](https://github.com/mairima/pp2-codequiz/blob/main/assets/js/script.js) | N/A | ![screenshot](documentation/validation/jshintvalidates-06-2025.png) |  |
 
 
 ## Responsiveness

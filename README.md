@@ -109,14 +109,14 @@ I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to ge
 
 ## Wireframes
 
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes, generated with chatgpt.
 
 | Page | Desktop |
 | --- | --- |
-| Home-start-modal | ![screenshot](./documentation/wirefarmes/modal-view.jpeg) |
-| Quiz-content | ![screenshot](./documentation/wirefarmes/quiz-view.jpeg) |
-| Score view  | ![screenshot](./documentation/wirefarmes/result-view.jpeg) |
-| 404  | ![screenshot](./documentation/wirefarmes/404page.jpeg) |
+| Home-start-modal | ![screenshot](./documentation/wirefarmes/modalwireframe-.png) |
+| Quiz-content | ![screenshot](./documentation/wirefarmes/questionwireframe-.png) |
+| Score view  | ![screenshot](./documentation/wirefarmes/playagainwireframe-.png) |
+| 404  | ![screenshot](./documentation/wirefarmes/404.png) |
 
 ## User Stories
 
