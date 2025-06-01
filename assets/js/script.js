@@ -226,8 +226,8 @@ function showScore() {
     const finalScore = correctCount * 10 + timeLeft;
     // Display score message
     questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!
-    Time used: ${timeUsed} seconds.
-    Your final score is ${finalScore}.`;
+    Time used: ${timeUsed} seconds.
+    Your final score is ${finalScore}.`;
     nextButton.innerText = "Play Again";
     nextButton.style.display = "inline-block";
     setHighScore(finalScore, timeUsed); // Pass new values
@@ -245,8 +245,7 @@ function handleNextButton() {
 // Event listener for the "Next" button
 nextButton.addEventListener("click", () => {
     if (nextButton.innerText === "Play Again") {
-        // just restart the game without prompting for name again
-        startGame();
+          window.location.reload();  // Reload the page to restart the game
     } else {
         handleNextButton();
     }

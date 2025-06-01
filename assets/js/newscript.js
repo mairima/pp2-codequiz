@@ -243,7 +243,7 @@ function handleNextButton() {
 // Event listener for the "Next" button
 nextButton.addEventListener("click", () => {
     if (nextButton.innerText === "Play Again") {
-        window.location.reload();
+        window.location.reload();  
     } else {
         handleNextButton();
     }
