@@ -1,4 +1,4 @@
-# Testing
+# TESTING
 
 > [!NOTE]
 > Path in case a return back to the [README.md](README.md) file is required.
