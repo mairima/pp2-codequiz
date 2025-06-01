@@ -187,7 +187,7 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 - **Should Have**: adds significant value, but not vital (*~20% of stories*)
 - **Could Have**: has small impact if left out (*the rest ~20% of stories*)
 
-## Testing
+## TESTING
 
 > [!NOTE]
 > For all testing, please refer to the [TESTING.md](https://github.com/mairima/pp2-codequiz/blob/main/Testing.md) file.
