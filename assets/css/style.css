@@ -4,9 +4,10 @@ body {
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
   background-size: cover;
-
+  background: url("../images/bg-images.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
 /* Quiz container styling */
 .quiz-container {
   background: rgba(255, 255, 255, 0.95);

@@ -109,7 +109,6 @@ const nextButton = document.getElementById("next-btn"); // "Next" button element
 const timeDisplay = document.getElementById("time"); // Time display element
 let highscoreContainer = document.getElementById("highscore"); // High score container
 let timeUsed = 100 - timeLeft; // Time used for the quiz
-
 // Check localStorage for existing name, on page-load, prefill name if available
 let scores = JSON.parse(localStorage.getItem('highScores') || '[]');
 scores = scores.sort((a, b) => b.score - a.score).slice(0, 5); // Sort and get top 5 high scores
@@ -118,7 +117,6 @@ if (scores.length > 0 && scores[0].name) {
     document.querySelector('#playerName').value = scores[0].name;
     startGame(); // Start the game if a name is already set
 }
-
 const startBtn = document.getElementById("start");
 startBtn.addEventListener("click", startGame);
 // Starts the game by initializing values and displaying the first question
@@ -156,9 +154,9 @@ function startTimer() {
     timer = setInterval(() => {
         timeLeft--; // Decrease time by 1 second
         timeDisplay.innerText = timeLeft; // Update the time display
-        if (timeLeft <= 0) {  // If time runs out
+        if (timeLeft <= 0) {  // If time runs out
             clearInterval(timer); // Stop the timer
-            showScore();  // Show the score screen
+            showScore();  // Show the score screen
         }
     }, 1000); // Timer interval of 1 second
 }
@@ -222,12 +220,12 @@ function showScore() {
     clearInterval(timer); // Stop the timer
     resetState(); // Reset state
     //Add Time used and Final Score to the score message
-    const timeUsed = 100 - timeLeft;
+    timeUsed = 100 - timeLeft;
     const finalScore = correctCount * 10 + timeLeft;
     // Display score message
     questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!
-    Time used: ${timeUsed} seconds.
-    Your final score is ${finalScore}.`;
+    Time used: ${timeUsed} seconds.
+    Your final score is ${finalScore}.`;
     nextButton.innerText = "Play Again";
     nextButton.style.display = "inline-block";
     setHighScore(finalScore, timeUsed); // Pass new values
@@ -245,8 +243,7 @@ function handleNextButton() {
 // Event listener for the "Next" button
 nextButton.addEventListener("click", () => {
     if (nextButton.innerText === "Play Again") {
-        // just restart the game without prompting for name again
-        startGame();
+        window.location.reload();
     } else {
         handleNextButton();
     }
@@ -268,7 +265,7 @@ function getHighScores() {
     highScores = highScores.sort((a, b) => b.score - a.score).slice(0, 5); // Sort and get top 5 high scores
     highscoreContainer.innerHTML = ` <h2>High Scores</h2>
 <ol id="highscore-list">
-  ${highScores.map(score => `<li>${score.name}: ${score.score} points (Time used: ${score.timeUsed}s)</li>`).join("")}
+  ${highScores.map(score => `<li>${score.name}: ${score.score} points (Time used: ${score.timeUsed}s)</li>`).join("")}
 </ol>`; // Display high scores and time in the container
 }
 // shuffles the questions array to randomize the order of questions
