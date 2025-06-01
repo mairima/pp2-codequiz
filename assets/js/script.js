@@ -156,9 +156,9 @@ function startTimer() {
     timer = setInterval(() => {
         timeLeft--; // Decrease time by 1 second
         timeDisplay.innerText = timeLeft; // Update the time display
-        if (timeLeft <= 0) {  // If time runs out
+        if (timeLeft <= 0) {  // If time runs out
             clearInterval(timer); // Stop the timer
-            showScore();  // Show the score screen
+            showScore();  // Show the score screen
         }
     }, 1000); // Timer interval of 1 second
 }
@@ -222,7 +222,7 @@ function showScore() {
     clearInterval(timer); // Stop the timer
     resetState(); // Reset state
     //Add Time used and Final Score to the score message
-    const timeUsed = 100 - timeLeft;
+    timeUsed = 100 - timeLeft;
     const finalScore = correctCount * 10 + timeLeft;
     // Display score message
     questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!
