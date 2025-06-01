@@ -1,7 +1,7 @@
+/* jshint esversion: 11 */
 // Array of question objects, each with a question, multiple answers, and the correct answer
 //HTML Quiz Questions
 const questions = [
-
     {
         question: "Choose the correct HTML element for the largest heading:",
         answers: [
@@ -11,7 +11,6 @@ const questions = [
             { text: "<h1>", correct: true }
         ]
     },
-
     {
         question: "Which HTML tag is used to define an internal style sheet?",
         answers: [
@@ -30,7 +29,6 @@ const questions = [
             { text: "<line>", correct: false }
         ]
     },
-
     // CSS
     {
         question: "What does CSS stand for?",
@@ -59,7 +57,6 @@ const questions = [
             { text: "# comment", correct: false }
         ]
     },
-
     // JavaScript
     {
         question: "Which symbol is used for comments in JavaScript?",
@@ -100,7 +97,7 @@ const questions = [
 ];
 // Game variables
 let currentQuestionIndex = 0; // Tracks the current question being displayed
-let correctCount = 0;  // Counter for correct answers
+let correctCount = 0;  // Counter for correct answers
 let incorrectCount = 0;// Counter for incorrect answers
 let timeLeft = 100; // Timer starting at 100 seconds
 let timer; // To store the timer interval
@@ -111,8 +108,7 @@ const answerButtons = document.getElementById("answer-buttons"); // Container fo
 const nextButton = document.getElementById("next-btn"); // "Next" button element
 const timeDisplay = document.getElementById("time"); // Time display element
 let highscoreContainer = document.getElementById("highscore"); // High score container
-const timeUsed = 100 - timeLeft; // Time used for the quiz
-
+let timeUsed = 100 - timeLeft; // Time used for the quiz
 // Starts the game by initializing values and displaying the first question
 function startGame() {
     // Only prompt for name if it's not already set
@@ -130,8 +126,6 @@ function startGame() {
         }
         playerName = nameInput.value.trim(); // Get player's name from input
     }
-    document.getElementById("displayName").textContent = playerName; // Display player's name
-
     document.getElementById("nameModal").style.display = "none"; // Hide name entry modal
     // Initialize game state
     currentQuestionIndex = 0; // Reset question index
@@ -141,20 +135,18 @@ function startGame() {
     document.getElementById("correctCount").textContent = "0"; // Update the correct count display
     document.getElementById("incorrectCount").textContent = "0"; // Update the incorrect count display
     document.getElementById("score-message").textContent = ""; // Clear score message
-
     shuffleQuestions(questions); // Shuffle questions for random order
     startTimer(); // Start the timer
     showQuestion();// Display the first question
-
 }
 // Starts the timer and updates the time display
 function startTimer() {
     timer = setInterval(() => {
         timeLeft--; // Decrease time by 1 second
         timeDisplay.innerText = timeLeft; // Update the time display
-        if (timeLeft <= 0) {  // If time runs out
+        if (timeLeft <= 0) {  // If time runs out
             clearInterval(timer); // Stop the timer
-            showScore();  // Show the score screen
+            showScore();  // Show the score screen
         }
     }, 1000); // Timer interval of 1 second
 }
@@ -163,10 +155,8 @@ function showQuestion() {
     resetState(); // Reset the state before showing a new question
     const current = questions[currentQuestionIndex]; // Get the current question
     questionEl.innerText = current.question; // Display the question
-
     // Shuffle the current question's answers
     const shuffledAnswers = [...current.answers].sort(() => Math.random() - 0.5);
-
     // Loop through each shuffled answer option
     shuffledAnswers.forEach(answer => {
         // Create a new button element for the answer
@@ -210,7 +200,7 @@ function selectAnswer(e) {
         const btn = li.firstChild;
         btn.disabled = true;
         if (btn.dataset.correct === "true") {
-            btn.style.backgroundColor = "#28a745";  // Highlight correct answer
+            btn.style.backgroundColor = "#28a745"; // Highlight correct answer
         }
     });
     nextButton.style.display = "inline-block"; // Show the "Next" button
@@ -224,9 +214,8 @@ function showScore() {
     const finalScore = correctCount * 10 + timeLeft;
     // Display score message
     questionEl.innerText = `${playerName}, you got ${correctCount} correct and ${incorrectCount} incorrect!
-    Time used: ${timeUsed} seconds.
-    Your final score is ${finalScore}.`;
-
+    Time used: ${timeUsed} seconds.
+    Your final score is ${finalScore}.`;
     nextButton.innerText = "Play Again";
     nextButton.style.display = "inline-block";
     setHighScore(finalScore, timeUsed); // Pass new values
@@ -243,7 +232,6 @@ function handleNextButton() {
 }
 // Event listener for the "Next" button
 nextButton.addEventListener("click", () => {
-
     if (nextButton.innerText === "Play Again") {
         // just restart the game without prompting for name again
         startGame();
@@ -268,7 +256,7 @@ function getHighScores() {
     highScores = highScores.sort((a, b) => b.score - a.score).slice(0, 5); // Sort and get top 5 high scores
     highscoreContainer.innerHTML = ` <h2>High Scores</h2>
 <ol id="highscore-list">
-  ${highScores.map(score => `<li>${score.name}: ${score.score} points (Time used: ${score.timeUsed}s)</li>`).join("")}
+  ${highScores.map(score => `<li>${score.name}: ${score.score} points (Time used: ${score.timeUsed}s)</li>`).join("")}
 </ol>`; // Display high scores and time in the container
 }
 // shuffles the questions array to randomize the order of questions
