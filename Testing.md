@@ -17,7 +17,6 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 |  | [404.html](https://github.com/mairima/pp2-codequiz/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/404.html) | ![screenshot](documentation/validation/404page.png) |  |
 |  | [index.html](https://github.com/mairima/pp2-codequiz/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://mairima.github.io/pp2-codequiz/index.html) | ![screenshot](./documentation/validation/passhtmlvalidator.png) | pass |
 
-
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
