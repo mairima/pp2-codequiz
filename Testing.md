@@ -25,7 +25,6 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | --- | --- | --- | --- | --- |
 | assets | [style.css](https://github.com/mairima/pp2-codequiz/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://mairima.github.io/pp2-codequiz) | ![screenshot](./documentation/validation/css-assets-style.png) | |
 
-
 ### JavaScript
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
